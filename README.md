@@ -15,7 +15,6 @@ and edit the `config.json` file:
 2. When Counter asks `Creating channel, What's the name of the channel` type counting or any channel name you like.
 3. Counter will send the message `#counting has been created, Start counting from 1.` go to the channel and start counting
 Example:![](https://cdn.discordapp.com/attachments/839829187233972244/847408169314549780/Screenshot_20210527-163726_Discord.jpg)
-#counting
 ![](https://cdn.discordapp.com/attachments/839829187233972244/847409147279966208/Screenshot_20210527-164118_Discord.jpg)
 ## Settings
 By typing `Csettings` you will given a list of options below
