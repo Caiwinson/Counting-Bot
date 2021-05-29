@@ -2,7 +2,6 @@ import discord
 import json
 from discord.ext import commands
 from discord.utils import get
-import os
 import asyncio
 from discord.ext.commands import MissingPermissions
 
@@ -17,7 +16,7 @@ client.remove_command('help')
 
 @client.event
 async def on_ready():
-	await client.change_presence(activity=discord.Game('Chelp'))
+	await client.change_presence(activity=discord.Game(f'{pre}help'))
 	print("ready")
 
 @client.command()
@@ -70,7 +69,7 @@ async def help(ctx):
 	    "Create a new counting channel for your server\nYou can only have 1 counting channel per server",
 	    inline=False)
 	embed.add_field(name=f"{pre}invite",
-	                value="Invite <@846989214892949514> to your server",
+	                value="Invite {client.user.mention} to your server",
 	                inline=False)
 	embed.set_footer(text="Bot created by Cai winson#2131")
 	await ctx.send(embed=embed)
@@ -96,6 +95,7 @@ async def settings(ctx, setting=None, tf=None):
 			    value=
 			    f"Let user count more than once\n```Countmore={count[str(ctx.guild.id)]['CountMore']}```"
 			)
+			embed.set_footer(text="Bot created by Cai winson#2131")
 			await ctx.send(embed=embed)
 			return
 		if str(ctx.guild.id) in count:
