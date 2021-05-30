@@ -1,8 +1,8 @@
 # About 
 Counter Bot is a basic discord counting bot that has option for you to allow user count more than once or the streak will not be reset if messed up
 ## Installation
-I am assuming that you have installed the `discord.py` dependencies
-if you don't go to https://pypi.org/project/discord.py/ and it will help you 	on how to install the module
+1. I am assuming that you have installed the `discord.py` dependencies
+2. If you don't go to https://pypi.org/project/discord.py/ and it will help you 	on how to install the module
 and edit the `config.json` file:
 ```Javascript
 {
