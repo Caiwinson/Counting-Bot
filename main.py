@@ -10,7 +10,6 @@ with open('config.json', 'r') as f:
 
 token = config['token']
 pre = config['prefix']
-invite_link = config['invite_link']
 client = commands.Bot(command_prefix=pre)
 client.remove_command('help')
 
