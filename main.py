@@ -60,15 +60,22 @@ async def help(ctx):
 	embed = discord.Embed(
 	    title=f"{pre}help",
 	    description=
-	    f"All of the command can only be executed with manage channel perm\nExcept for {pre}invite",
+	    f"All of the command can only be executed with manage channels perm\nExcept for {pre}invite",
 	    colour=0x3b88c3)
 	embed.add_field(
 	    name=f"{pre}start",
 	    value=
 	    "Create a new counting channel for your server\nYou can only have 1 counting channel per server",
 	    inline=False)
+	embed.add_field(
+	    name=f"{pre}settings",
+	    value=f"Type {pre}settings to view list of avaiable settings",
+	    inline=False)
 	embed.add_field(name=f"{pre}invite",
-	                value="Invite {client.user.mention} to your server",
+	                value="Invite <@846989214892949514> to your server",
+	                inline=False)
+	embed.add_field(name=f"{pre}prefix",
+	                value="Change bot prefix",
 	                inline=False)
 	embed.set_footer(text="Bot created by Cai winson#2131")
 	await ctx.send(embed=embed)
@@ -144,7 +151,7 @@ async def on_message(message):
 					if ResetOnFail == "True":
 						if message.author.id == latest:
 							await message.add_reaction(
-							    "<:warningsign:847330302640521240>")
+							    "❌")
 							await message.channel.send(
 							    f"{message.author.mention} screwed up at {amount}\nYou can't count twice\nStart Counting from 1 again"
 							)
@@ -164,7 +171,7 @@ async def on_message(message):
 				if not message.content.startswith(f"{amount}"):
 					if ResetOnFail == "True":
 						await message.add_reaction(
-						    "<:warningsign:847330302640521240>")
+						    "❌")
 						await message.channel.send(
 						    f"{message.author.mention} screwed up at {amount}\nYou sent the wrong number\nStart Counting from 1 again"
 						)
