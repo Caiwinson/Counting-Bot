@@ -60,7 +60,7 @@ async def help(ctx):
 	embed = discord.Embed(
 	    title=f"{pre}help",
 	    description=
-	    f"All of the command can only be executed with manage channels perm\nExcept for {pre}invite",
+	    f"All of the command can only be executed with manage channels perm",
 	    colour=0x3b88c3)
 	embed.add_field(
 	    name=f"{pre}start",
@@ -71,12 +71,6 @@ async def help(ctx):
 	    name=f"{pre}settings",
 	    value=f"Type {pre}settings to view list of avaiable settings",
 	    inline=False)
-	embed.add_field(name=f"{pre}invite",
-	                value="Invite <@846989214892949514> to your server",
-	                inline=False)
-	embed.add_field(name=f"{pre}prefix",
-	                value="Change bot prefix",
-	                inline=False)
 	embed.set_footer(text="Bot created by Cai winson#2131")
 	await ctx.send(embed=embed)
 
